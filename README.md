@@ -60,16 +60,20 @@ Activation Stats has 3 main graphs:
 - Dead Chart: show volume of value equal or near zero of activation layers.  
 
 For Mean/Std graph, we want the value to be consistent, through out the whole training process.  
-E.g. ![Good Mean/Std graph](images/good_mean_std_graph)
-![Bad Mean/Std graph](images/bad_mean_std_graph)  
-(x axis is the number of batches)  
-
 For Color Dim, we want the value to equally spread out, through out the whole training process.  
-E.g. ![Good Mean/Std graph](images/good_color_dim)
-![Bad Mean/Std graph](images/bad_color_dim)  
-(x axis is the number of batches) 
-
 For Dead Chart, we want the value equal or near zero to be really low, throgh out the whole training process.  
+
+3. The Original file's Activation Stats (rebuild version) (Good): image_generator_nonorm_miniai_100k_20e.ipynb
+...
+
+4. Origianl experiment file's Activation Stats (Bad): image_generator_nonorm.ipynb
+...
+
+5. One of the good experiment (Good): image_generator_(32,32,64,64,128,128)_(DDAADD)_InitXavierNormRelu_Lr1e-5_100k_25e.ipynb
+...
+
+
+
 E.g. ![Good Mean/Std graph](images/good_dead_chart)
 ![Bad Mean/Std graph](images/bad_dead_chart)  
 (x axis is the number of batches)  
