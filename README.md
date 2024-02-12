@@ -1,4 +1,4 @@
-# LSUN-Bedroom-Diffusion-UNet-with-Layer-Architectures-and-Hyperparameters-Experiment  
+# LSUN-Bedroom-Latent-Diffusion-UNet-with-Layer-Architectures-and-Hyperparameters-Experiment  
 My personal practice, try to train LSUN Bedroom Diffusion Unet (from Diffusers), from sratch, with different Layer Architectures and Hyperparameters.  
 
 # Main Objective  
@@ -59,30 +59,36 @@ Activation Stats has 3 main graphs:
 - Color Dimension (Color Dim): show histogram values of activation layers.  
 - Dead Chart: show volume of value equal or near zero of activation layers.  
 
-For Mean/Std graph, we want the value to be consistent, through out the whole training process.  
+For Mean/Std graph, we want the Mean to be around 0 and Std to be around 1 at the start. We also want the value to be consistent, through out the whole training process.  
 For Color Dim, we want the value to equally spread out, through out the whole training process.  
 For Dead Chart, we want the value equal or near zero to be really low, throgh out the whole training process.  
 
-3. The Original file's Activation Stats (rebuild version) (Good): image_generator_nonorm_miniai_100k_20e.ipynb
-...
+3. The Original file's Activation Stats (rebuilt version) (Good): image_generator_nonorm_miniai_100k_20e.ipynb
 
-4. Origianl experiment file's Activation Stats (Bad): image_generator_nonorm.ipynb
-...
+<img scr="images/image_generator_nonorm_miniai_100k_20e.JPG" width="200" height="400">
 
-5. One of the good experiment (Good): image_generator_(32,32,64,64,128,128)_(DDAADD)_InitXavierNormRelu_Lr1e-5_100k_25e.ipynb
-...
+5. One of the bad result experiment (Bad): (I did not save to source file, but I saved the result)
 
+<img scr="images/stats_(32,64,64,128)_(DAAD)_InitXavierNormRelu_BatchNormRN_60e.JPG" width="200" height="400">
 
+6. One of the good result experiment (Good): image_generator_(32,32,64,64,128,128)_(DDAADD)_InitXavierNormRelu_Lr1e-5_100k_25e.ipynb
 
-E.g. ![Good Mean/Std graph](images/good_dead_chart)
-![Bad Mean/Std graph](images/bad_dead_chart)  
+<img scr="images/image_generator_(32,32,64,64,128,128)_(DDAADD)_InitXavierNormRelu_Lr1e-5_100k_25e.JPG" width="200" height="400">
+
+7. Generally, typical Mean/Std good graphs and bad graphs will look something like this below:
+
+Good  
+<img scr="images/good_mean_std_graph.JPG" width="200" height="200">  
+
+Bad  
+<img scr="images/bad_mean_std_graphh.JPG" width="200" height="200">  
+
 (x axis is the number of batches)  
 
-A good training process will be the process with all the 3 graphs good.  
-
-3. The Original file:
-4. 
-
-... E.g. pic of original file, e.g. pic of original experiment file.  
-... E.g. pic of good act stats for training, e.g. pic of bad act stats for training.  
-... smaller loss is not corespoding to better training.  
+8. For this Latent Diffusion UNet with LSUN Bedroom dataset, here are Layer Architectures and Hyperparameters pattern I tried that gave the good Mean/Std graphs, or something similar: 
+- Try Batch Norm layers.  
+- Try smaller Learning Rate.  
+- Try smaller Batch.  
+- For Diffusers UNet, try more blocks.
+- For Diffusers UNet, try more block_out_channels.
+- For Diffusers UNet, try more Attention blocks. 
