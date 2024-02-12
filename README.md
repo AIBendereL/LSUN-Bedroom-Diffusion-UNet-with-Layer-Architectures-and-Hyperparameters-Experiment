@@ -78,10 +78,10 @@ Activation Stats has 3 main graphs:
 7. Generally, typical Mean/Std good graphs and bad graphs will look something like this below:
 
 Good  
-<img scr="images/good_mean_std_graph.JPG" width="200" height="200">  
+<img scr="images/good_mean_std_graph.jpg" width="200" height="200">  
 
 Bad  
-<img scr="images/bad_mean_std_graphh.JPG" width="200" height="200">  
+<img scr="images/bad_mean_std_graphh.jpg" width="200" height="200">  
 
 **(x axis is the number of batches)**  
 
