@@ -43,6 +43,7 @@ Notice:
 2. Know Latent Diffusion pipeline.
 3. Know Pytorch.
 4. Know Fastai.
+5. Know Activation Stats (Fastai).  
 
 # Result  
 Although, there are quite some experiments I try out, they are not really arranged well, and also some missing notebooks (I alternated hyperparameters little by little and forgot to save each individual changes). Therefore, it can be a pain to go through looking at the results to find meaningful patterns.  
@@ -50,7 +51,33 @@ Although, there are quite some experiments I try out, they are not really arrang
 For that, I will try to show the insights of which Layer Atchitecture and Hyperparameters changing has significant impact to the training model process result.  
 
 # Insight  
-1. With the Original files from Fastai Course Part 2, Lesson 25, training process goes on smoothly. However, when I use Diffusers UNet with the same setups, the training process does not go well.
+1. With the Original file from Fastai Course Part 2, Lesson 25, training process goes on smoothly. However, when I use Diffusers UNet with the same setups, the training process does not go well, the loss rocketed after training for a while.  
+2. Because some of my experiments involve changing Noisify function, which affect the Loss, meaning smaller Loss does not always mean better training. Therefore, I use Activation Stats to examine models training performance.
+
+Activation Stats has 3 main graphs:  
+- Mean/Standard deviation (Mean/Std) graph: show mean and std of activation layers.  
+- Color Dimension (Color Dim): show histogram values of activation layers.  
+- Dead Chart: show volume of value equal or near zero of activation layers.  
+
+For Mean/Std graph, we want the value to be consistent, through out the whole training process.  
+E.g. ![Good Mean/Std graph](images/good_mean_std_graph)
+![Bad Mean/Std graph](images/bad_mean_std_graph)  
+(x axis is the number of batches)  
+
+For Color Dim, we want the value to equally spread out, through out the whole training process.  
+E.g. ![Good Mean/Std graph](images/good_color_dim)
+![Bad Mean/Std graph](images/bad_color_dim)  
+(x axis is the number of batches) 
+
+For Dead Chart, we want the value equal or near zero to be really low, throgh out the whole training process.  
+E.g. ![Good Mean/Std graph](images/good_dead_chart)
+![Bad Mean/Std graph](images/bad_dead_chart)  
+(x axis is the number of batches)  
+
+A good training process will be the process with all the 3 graphs good.  
+
+3. The Original file:
+4. 
 
 ... E.g. pic of original file, e.g. pic of original experiment file.  
 ... E.g. pic of good act stats for training, e.g. pic of bad act stats for training.  
