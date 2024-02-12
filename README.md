@@ -65,23 +65,23 @@ Activation Stats has 3 main graphs:
 
 3. The Original file's Activation Stats (rebuilt version) (Good): *image_generator_nonorm_miniai_100k_20e.ipynb*
 
-<img scr="images/image_generator_nonorm_miniai_100k_20e.JPG" width="200" height="400">
+<img scr="images/image_generator_nonorm_miniai_100k_20e.JPG" width="400" height="400">
 
 5. One of the bad result experiment (Bad): (I did not save to source file, but I saved the result)
 
-<img scr="images/stats_(32,64,64,128)_(DAAD)_InitXavierNormRelu_BatchNormRN_60e.JPG" width="200" height="400">
+<img scr="images/stats_(32,64,64,128)_(DAAD)_InitXavierNormRelu_BatchNormRN_60e.JPG" width="400" height="400">
 
 6. One of the good result experiment (Good): *image_generator_(32,32,64,64,128,128)_(DDAADD)_InitXavierNormRelu_Lr1e-5_100k_25e.ipynb*
 
-<img scr="images/image_generator_(32,32,64,64,128,128)_(DDAADD)_InitXavierNormRelu_Lr1e-5_100k_25e.JPG" width="200" height="400">
+<img scr="images/image_generator_(32,32,64,64,128,128)_(DDAADD)_InitXavierNormRelu_Lr1e-5_100k_25e.JPG" width="400" height="400">
 
 7. Generally, typical Mean/Std good graphs and bad graphs will look something like this below:
 
 Good  
-<img scr="images/good_mean_std_graph.jpg" width="200" height="200">  
+<img scr="images/good_mean_std_graph.JPG" width="200" height="200">  
 
 Bad  
-<img scr="images/bad_mean_std_graphh.jpg" width="200" height="200">  
+<img scr="images/bad_mean_std_graph.JPG" width="200" height="200">  
 
 **(x axis is the number of batches)**  
 
