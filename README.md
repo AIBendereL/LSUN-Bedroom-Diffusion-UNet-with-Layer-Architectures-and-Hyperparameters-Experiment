@@ -63,19 +63,24 @@ Activation Stats has 3 main graphs:
 - For **Color Dim**, we want the value to equally spread out, through out the whole training process.  
 - For **Dead Chart**, we want the value equal or near zero to be really low, throgh out the whole training process.  
 
-3. The Original file's Activation Stats (rebuilt version) (Good): *image_generator_nonorm_miniai_100k_20e.ipynb*
+3. The Original file's Activation Stats (rebuilt version) (Good): *image_generator_nonorm_miniai_100k_20e.ipynb*  
+   PATH: *images/image_generator_nonorm_miniai_100k_20e.JPG*  
 
 <img scr="images/image_generator_nonorm_miniai_100k_20e.JPG" width="400" height="400">
 
-5. One of the bad result experiment (Bad): (I did not save to source file, but I saved the result)
+4. One of the bad result experiment (Bad): (I did not save to source file, but I saved the result)  
+   PATH: *images/stats_(32,64,64,128)_(DAAD)_InitXavierNormRelu_BatchNormRN_60e.JPG*  
 
 <img scr="images/stats_(32,64,64,128)_(DAAD)_InitXavierNormRelu_BatchNormRN_60e.JPG" width="400" height="400">
 
-6. One of the good result experiment (Good): *image_generator_(32,32,64,64,128,128)_(DDAADD)_InitXavierNormRelu_Lr1e-5_100k_25e.ipynb*
+5. One of the good result experiment (Good): *image_generator_(32,32,64,64,128,128)_(DDAADD)_InitXavierNormRelu_Lr1e-5_100k_25e.ipynb*  
+   PATH: *images/image_generator_(32,32,64,64,128,128)_(DDAADD)_InitXavierNormRelu_Lr1e-5_100k_25e.JPG*  
 
 <img scr="images/image_generator_(32,32,64,64,128,128)_(DDAADD)_InitXavierNormRelu_Lr1e-5_100k_25e.JPG" width="400" height="400">
 
-7. Generally, typical Mean/Std good graphs and bad graphs will look something like this below:
+6. Generally, typical Mean/Std good graphs and bad graphs will look something like this below:  
+   PATH Good: *images/good_mean_std_graph.JPG*  
+   PATH Bad: *images/bad_mean_std_graph.JPG*  
 
 Good  
 <img scr="images/good_mean_std_graph.JPG" width="200" height="200">  
@@ -84,8 +89,9 @@ Bad
 <img scr="images/bad_mean_std_graph.JPG" width="200" height="200">  
 
 **(x axis is the number of batches)**  
+**(if the images not showing, please check the "images" folder with correspoing PATH)**
 
-8. For this Latent Diffusion UNet with LSUN Bedroom dataset, here are Layer Architectures and Hyperparameters patterns I tried that gave the good Mean/Std graphs, or something similar: 
+7. For this Latent Diffusion UNet with LSUN Bedroom dataset, here are Layer Architectures and Hyperparameters patterns I tried that gave the good Mean/Std graphs, or something similar: 
 - Try Batch Norm layers.  
 - Try smaller Learning Rate.  
 - Try smaller Batch.  
