@@ -91,10 +91,17 @@ Bad
 **(x axis is the number of batches)**  
 **(if the images not showing, please check the "images" folder with correspoing PATH)**
 
-7. For this Latent Diffusion UNet with LSUN Bedroom dataset, here are Layer Architectures and Hyperparameters patterns I tried that gave the good Mean/Std graphs, or something similar: 
+## Conclusion  
+For this Latent Diffusion UNet with LSUN Bedroom dataset, here are Layer Architectures and Hyperparameters patterns I tried that gave the good Mean/Std graphs, or something similar: 
 - Try Batch Norm layers.  
 - Try smaller Learning Rate.  
 - Try smaller Batch.  
 - For Diffusers UNet, try more blocks.
 - For Diffusers UNet, try more block_out_channels.
-- For Diffusers UNet, try more Attention blocks. 
+- For Diffusers UNet, try more Attention blocks.
+
+# Further Experiments  
+Some more experiments ideas:  
+1. It is recommended and a good practice to fine-tune a pre-trained model.
+2. The guide on Diffusers main page suggests to normalize the input of the UNet, which is what the UNet wants.
+3. Train even longer.  
